@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>ConsoleApp_slow</RootNamespace>
+    <Configurations>Debug;Release;prod</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,10 @@
     <None Update="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <TransformOnBuild>true</TransformOnBuild>
+    </None>
+    <None Update="appsettings.prod.json">
+      <IsTransformFile>true</IsTransformFile>
+      <DependentUpon>appsettings.json</DependentUpon>
     </None>
     <None Update="appsettings.Release.json">
       <IsTransformFile>true</IsTransformFile>
